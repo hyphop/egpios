@@ -1,0 +1,24 @@
+#!/bin/sh
+
+## hyphop ##
+
+grep "" /sys/class/gpio/gpio*/edge || {
+    echo "no any exported gpios"
+    exit 0
+}
+
+#~ /sys/class/gpio/gpio0/edge:both
+#~ /sys/class/gpio/gpio1/edge:both
+#~ /sys/class/gpio/gpio3/edge:both
+
+grep "" /sys/class/gpio/gpio*/direction
+
+#~ /sys/class/gpio/gpio0/direction:in
+#~ /sys/class/gpio/gpio1/direction:in
+#~ /sys/class/gpio/gpio3/direction:in
+
+grep "" /sys/class/gpio/gpio*/value
+
+#~ /sys/class/gpio/gpio0/value:1
+#~ /sys/class/gpio/gpio1/value:1
+#~ /sys/class/gpio/gpio3/value:1

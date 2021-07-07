@@ -1,0 +1,10 @@
+#!/bin/sh
+
+## hyphop ##
+
+. `dirname $0`/egpios_conf
+
+gpio_unexport $gpios
+
+egpios $gpios
+

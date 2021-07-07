@@ -1,0 +1,12 @@
+#!/bin/sh
+
+## hyphop ##
+
+# PA14 PA16 PA03 PA07
+
+gpios="14 16 3 7"
+
+# PA14 PA16 PG06 PG07
+
+gpios="14 16 198 199"
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+## hyphop ##
+
+sec=0
+while [ "1" ]; do
+
+    echo "watch IRQ gpios handles $sec sec"
+    cat /proc/interrupts | egrep PA\|PG\|PL\|gpio
+    [ "$1" ] && break 
+    sleep 1
+    sec=$((sec+1))
+done
+

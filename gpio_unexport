@@ -1,0 +1,13 @@
+#!/bin/sh
+
+## hyphop ##
+
+for n in $@; do
+    
+    [ -x "/sys/class/gpio/gpio$n" ] && {
+	echo "unexport gpio $n"
+	echo $n > /sys/class/gpio/unexport
+    }
+
+done
+
